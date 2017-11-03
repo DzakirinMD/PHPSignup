@@ -1,0 +1,23 @@
+Open Xammp
+mysql -u root -p
+
+Syntax
+create db : CREATE DATABASE dbanme
+create table :  CREATE TABLE table name(
+		fieldname datatype(how many character),
+		fieldname datatype(how many character),
+		fieldname datatype(how many character)
+		);							
+
+Manipulation
+show all database : show databases ;
+to use db : USE dbname;
+to show table : show tables;
+
+create db : CREATE DATABASE userlogin;
+create table :  CREATE TABLE user(
+		id int(11) auto increment primary key not null,
+		username varchar(30) not null,
+		password varchar(30) not null,
+		email varchar(50) not null
+		);	
