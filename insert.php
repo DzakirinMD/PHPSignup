@@ -16,10 +16,37 @@ $password =  mysqli_real_escape_string($connection, $_REQUEST['password']);
 
 // attempt insert query execution
 $sql="INSERT INTO users (id,first_name,last_name,username,email,password) VALUES ('$id','$first_name','$last_name','$username','$email','$password')";
+
 if(mysqli_query($connection, $sql)){
-    echo "Records added successfully.";
-} else{
+echo '
+<link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Success !!</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+  	<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>You have successfully Sign<span>Up!</span> on our page !!</div>
+		</div>
+		<br>
+  	</form>
+</body>
+</html>
+';
+ 	
+}
+
+
+else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($connection);
 }
+
+
+//echo "You have successfully sing up on our page";
+	//echo '';
+   // echo '<button onclick="history.go(-1);"> Back </button>' ;
 
 ?>
